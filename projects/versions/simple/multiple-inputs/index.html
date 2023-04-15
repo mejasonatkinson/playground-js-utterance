@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- font awesome: used for play/pause icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Simple, Multiple Input, Speech Synthesiser</title>
+</head>
+<body>
+    
+    <!-- controls -->
+    <div class="speech-synthesiser">
+        <!-- play/pause -->
+        <span class="btn-group">
+            <button id="play" aria-label="play"><i class="fa fa-play"></i></button>
+            <button id="pause" aria-label="pause"><i class="fa fa-pause"></i></button>
+            <button id="resume" aria-label="resume"><i class="fa fa-play"></i></button>
+        </span>
+    </div>    
+
+    <!-- content -->
+    <div class="post-content">
+        <p>Hello, this is a working speech synthesiser</p>
+    </div>
+    <div class="post-content">
+        <p>Hello, this is a second section</p>
+    </div>
+    <div class="post-content">
+        <p>Hello, this is a third section</p>
+    </div>
+
+    <nav class="nav-content">
+        <ul>
+            <li>
+                <a href="">Next content</a>
+            </li>
+            <li>
+                <a href="">Previous content</a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- the magic! -->
+    <script src="script.js"></script>
+
+</body>
+</html>

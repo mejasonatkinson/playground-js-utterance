@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- font awesome: used for play/pause icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>Feature Rich, Speech Synthesiser</title>
+</head>
+<body>
+    
+    <!-- controls -->
+    <div class="speech-synthesis">
+        <!-- play/pause -->
+        <span class="btn-group">
+            <button id="play" aria-label="play"><i class="fa fa-play"></i></button>
+            <button id="pause" aria-label="pause"><i class="fa fa-pause"></i> </button>
+            <button id="resume" aria-label="resume"><i class="fa fa-play"></i></button>
+        </span>
+        <!-- volume -->
+        <label for="volume" class="volume-container">
+            <input type="range" min="0" max="1" step="0.1" value="1" class="slider" id="volume">
+            <button id="volume-button" aria-label="volume"><i class="fa fa-volume-up"></i></button>
+        </label>
+        <!-- Submenu with more controls -->
+        <span id="sub-menu">
+            <button id="more-options-button"  aria-lable="More Options"> <i class="fa fa-ellipsis-v"></i></button>
+            <span id="sub-menu-container" style="display: none;">
+                <div class="inner-container">
+                    <!-- navigation buttons, close/back -->
+                    <div class="row" id="nav">
+                            <button id="back-button" aria-label="back"><i class="fa fa-arrow-left"></i></button>
+                            <button id="close-button" aria-label="close"><i class="fa fa-close"></i></button>
+                    </div>
+                    <div class="row">
+                        <!-- volume // not sure whether to keep, as duplicate? -->
+                        <div id="speaking-volume" class="btn">
+                            Speaking Volume 
+                        </div>
+                        <div id="speaking-volume-menu" class="setting" style="display: none;">
+                            <div class="title">Speaking Volume </div>
+                            <div class="item">
+                                <input type="range" min="0" max="1" step="0.1" value="1" class="slider" id="volume">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <!-- speed/rate -->
+                        <div id="speaking-speed" class="btn">
+                            Speaking Speed/Rate 
+                        </div>
+                        <div id="speaking-speed-menu" class="setting" style="display: none;">
+                            <div class="title">Speaking Speed/Rate</div>
+                            <div class="item">
+                                <input type="range" min="0.1" max="10" step="0.1" value="1" class="slider" id="rate">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <!-- pitch -->
+                        <div id="speaking-pitch" class="btn">
+                            Speaking Pitch
+                        </div>
+                        <div id="speaking-pitch-menu" class="setting" style="display: none;">
+                            <div class="title">Speaking Pitch</div>
+                            <div class="item">
+                                <input type="range" min="0" max="2" step="0.1" value="1" class="slider" id="pitch">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <!-- language -->
+                        <div id="speaking-lang" class="btn">
+                            Speaking Language
+                        </div>
+                        <div id="speaking-lang-menu" class="setting" style="display: none;">
+                            <div class="title">Speaking Language</div>
+                            <input type="text" name="" id="lang-input"> <!-- Store input selected -->
+                            <ul id="lang-list"> <!-- Custom select list, for Language -->
+                    
+                            </ul>
+
+                        </div>
+                    </div>
+                    <div class="row">
+                        <!-- voice based on language? -->
+                        <div id="speaking-voice" class="btn">
+                            Speaking Voice
+                        </div>
+                        <div id="speaking-voice-menu" class="setting" style="display: none;">
+                            <div class="title">Speaking Voice</div>
+                            <input type="text" name="" id="voice-input"> <!-- Store input selected -->
+                            <ul id="voice-list"> <!-- Custom select list, for Voice -->
+                    
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </span>
+        </span>
+    </div>    
+
+    <!-- content -->
+    <div id="post-content">
+        <p>Hello, this is a working speech synthesiser</p>
+    </div>
+
+    <!-- the magic! -->
+    <script src="script.js"></script>
+
+</body>
+</html>
